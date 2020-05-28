@@ -1,0 +1,105 @@
+{
+  "name": "vue-mobile-project",
+  "version": "1.0.0",
+  "description": "vue项目",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imspnfans/vue-mobile-project.git"
+  },
+  "author": {
+    "name": "imspnfans"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve:mock": "vue-cli-service serve --mode mock",
+    "serve:dev": "vue-cli-service serve --mode dev",
+    "build:uat": "vue-cli-service build --mode uat",
+    "deploy:uat": "npm run build:uat&&node deploy.js",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "changeLog": " npx conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^6.12.0",
+    "amfe-flexible": "^2.2.1",
+    "axios": "^0.19.2",
+    "element-ui": "^2.13.0",
+    "mockjs": "^1.1.0",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.3",
+    "vue-property-decorator": "^8.4.0",
+    "vue-router": "^3.1.6",
+    "vuex": "^3.1.2",
+    "vuex-class": "^0.3.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^2.21.0",
+    "@typescript-eslint/parser": "^2.21.0",
+    "@typescript-eslint/typescript-estree": "^2.21.0",
+    "@vue/cli-plugin-babel": "^4.2.2",
+    "@vue/cli-plugin-eslint": "^4.2.2",
+    "@vue/cli-plugin-typescript": "^4.2.2",
+    "@vue/cli-service": "^4.2.2",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "autoprefixer": "^9.7.4",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-component": "^1.1.1",
+    "babel-plugin-import": "^1.13.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-vue": "^6.2.1",
+    "fibers": "^4.0.2",
+    "http-proxy-middleware": "^1.0.0",
+    "husky": "^4.2.3",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.13.1",
+    "ora": "^4.0.3",
+    "postcss-pxtorem": "^4.0.1",
+    "prettier": "^1.19.1",
+    "sass": "^1.26.1",
+    "sass-loader": "^8.0.2",
+    "ssh2-sftp-client": "^5.0.2",
+    "typescript": "^3.2.1",
+    "typescript-eslint-parser": "^22.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/typescript"
+    ],
+    "rules": {
+      "no-console": "off",
+      "no-unused-vars": "off",
+      "prefer-const": "off"
+    },
+    "parserOptions": {
+      "parser": "typescript-eslint-parser"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  }
+}
